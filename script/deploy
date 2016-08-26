@@ -1,6 +1,6 @@
 #!/bin/sh
  
-ssh konglee@rnd-lab-2.chaatz.com <<EOF
+ssh -t -t konglee@rnd-lab-2.chaatz.com <<EOF
   cd ~/repos/github/hello-jenkins
   git pull
   npm install --production
