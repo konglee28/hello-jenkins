@@ -3,7 +3,9 @@
 ssh -t -t konglee@rnd-lab-2.chaatz.com <<EOF
   cd ~/repos/github/hello-jenkins
   git pull
+  forever stopall
+  sleep 5
   npm install --production
-  forever restartall
+  forever start app.js 
   exit
 EOF
